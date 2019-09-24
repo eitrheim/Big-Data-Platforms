@@ -24,6 +24,8 @@
 
 # Update all Python packages with pip  
 `pip list --outdated --format=freeze | grep -v '^-e' | cut -d = -f 1 | xargs -n1 pip install -U`
+or
+`pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U`
 
 # Access RCC with Filezilla
 hadoop.rcc.uchicago.edu  
